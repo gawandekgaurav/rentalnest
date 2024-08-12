@@ -1,0 +1,23 @@
+package com.app.services;
+
+package com.app.services;
+
+import java.util.List;
+
+import com.app.dto.PropertyDTO;
+
+public interface PropertyService {
+    PropertyDTO createProperty(PropertyDTO propertyDTO);
+
+    PropertyDTO updateProperty(Long propertyId, PropertyDTO propertyDTO);
+
+    PropertyDTO getPropertyById(Long propertyId);
+
+    void deleteProperty(Long propertyId);
+
+    List<PropertyDTO> getAllProperties();
+
+    List<PropertyDTO> getPropertiesByLandlord(Long landlordId);
+
+    List<PropertyDTO> getPropertiesByStatus(String status);
+}

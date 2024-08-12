@@ -1,0 +1,16 @@
+package com.app.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.app.entity.Property;
+
+@Repository
+
+//PropertyRepository.java
+public interface PropertyRepository extends JpaRepository<Property, Integer> {
+ List<Property> findByLandlord_UserId(int landlordId); // Use int instead of Long
+ List<Property> findByStatus(String status);
+}
